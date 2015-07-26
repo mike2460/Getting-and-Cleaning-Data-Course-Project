@@ -24,7 +24,7 @@ Here are the data for the project:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-###Tidy Data Principles Followed
+###Tidy Data Principles Followed:
 
 In section 2.3 of Hadley [link]http://vita.had.co.nz/papers/tidy-data.pdf, he references Codd's 3rd normal form as it might pertain to the constraints of statistical language and when focused on a single dataset.  This suggests that tidy data be organized by the following 3 core rules:  
 
@@ -60,9 +60,9 @@ The version of the script uploaded here has sets a working directory on line 9.
 The dataset download extracts itself to a folder named 'UCI HAR Dataset'.
 You need to modify the value of the setwd command in line 9 to point to this folder before attempting to run it.   
 
-Operating system used was Windows 8.1.
-Script was testing on RStudio v.0.99.441 and R v.3.2.0.
-Script generation was performed using Sublime Text build 3083.
+* Operating system used was Windows 8.1.
+* Script was testing on RStudio v.0.99.441 and R v.3.2.0.
+* Script generation was performed using Sublime Text build 3083.
 
 
 
