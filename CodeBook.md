@@ -51,10 +51,9 @@ Once those names have been found, a subset of the full data set is generated usi
 The script then adds a column that translated the activity label into a more descriptive activity name based on the label/name table in the file 'activity_labels.txt'.  
 
 ### Appropriately label dataset with descriptive variable names
+The desired outcome of this step is to clean up the variable names in an effort to make them somewhat more descriptive, consistent, and potentially easier to work with in R.  I followed some recommendations in [link]http://ivanhanigan.github.io/datasharing/datasharing.html and [link]http://vita.had.co.nz/papers/tidy-data.pdf that suggested using underscores rather than dots in variable names as separators.  The script also removes parentheses, expanded some abbreviations, and cleaned up a potentially confusing 'BodyBody' entry.
 
-
-
-Additionally, the following variable name modifications were performed:
+The following variable name modifications were performed:
 
 1. Removed parenthesis from any variable names.  (Ex. mean() -> mean, etc)
 2. Replaced -t with 'Time _' and -f with 'Frequency _' in any variable names.
@@ -73,9 +72,9 @@ Activity --  Type of activity tracked for each individual. (One of 6 activity ty
 
 ##Measurements
 
-"Time _ BodyAcceleration _ Mean_X" 
-"Time _ BodyAcceleration _ Mean_Y" 
-"Time _ BodyAcceleration _ Mean_Z" 
+"Time_BodyAcceleration_Mean_X" 
+"Time_ BodyAcceleration _ Mean_Y" 
+"Time _ BodyAcceleration _ Mean_Z" http://vita.had.co.nz/papers/tidy-data.pdf
 "Time _ BodyAcceleration _ StandardDeviation_X" 
 "Time _ BodyAcceleration _ StandardDeviation_Y" 
 "Time _ BodyAcceleration _ StandardDeviation_Z" 
