@@ -61,17 +61,17 @@ df_all_data$activity <- factor(df_all_data$activity, levels = df_activity_labels
 names(df_all_data)	<- gsub('\\(|\\)', "", names(df_all_data))
 
 # Replace -t with time and -f with frequency in variable names
-names(df_all_data)	<- gsub('^t', 'Time.', names(df_all_data))
-names(df_all_data)	<- gsub('^f', 'Frequency.', names(df_all_data))
+names(df_all_data)	<- gsub('^t', 'Time_', names(df_all_data))
+names(df_all_data)	<- gsub('^f', 'Frequency_', names(df_all_data))
 
 # Rename .std and .mean endings
-names(df_all_data)	<- gsub('\\-mean', '.Mean', names(df_all_data))
-names(df_all_data)	<- gsub('\\-std', '.StandardDeviation', names(df_all_data))
+names(df_all_data)	<- gsub('\\-mean', '_Mean', names(df_all_data))
+names(df_all_data)	<- gsub('\\-std', '_StandardDeviation', names(df_all_data))
 
 # Change -X, -Y, -Z to .X, .Y, .Z for consistency in variable delimiters
-names(df_all_data)	<- gsub('\\-X', '.X', names(df_all_data))
-names(df_all_data)	<- gsub('\\-Y', '.Y', names(df_all_data))
-names(df_all_data)	<- gsub('\\-Z', '.Z', names(df_all_data))
+names(df_all_data)	<- gsub('\\-X', '_X', names(df_all_data))
+names(df_all_data)	<- gsub('\\-Y', '_Y', names(df_all_data))
+names(df_all_data)	<- gsub('\\-Z', '_Z', names(df_all_data))
 
 # Improve description of particular name shorthand used in original dataset
 names(df_all_data)	<- gsub('Acc', 'Acceleration', names(df_all_data))

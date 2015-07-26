@@ -37,15 +37,29 @@ Notes:
 For more information about this dataset contact: activityrecognition@smartlab.ws
 Information reposted from README file of full dataset download from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-## Tidy Data Set
+## Tidy Data Set Modifications
 
-The tidy dataset contains the averages of all features of the standard deviation and mean values of the raw data set.
+### Merge test and training datasets together
+The script combines the test and training data from the features, activities and subject data files into one dataset.
+At this stage, the variable names used are the ones found in the features.txt file.
+
+### Create subset of mean and standard deviation data
+Next the script uses a grep command: grep("mean\\(\\)|std\\(\\)" to find all feature names that have 'mean' or 'std' in them.
+Once those names have been found, a subset of the full data set is generated using those names.
+
+### Add descriptive activity names
+The script then adds a column that translated the activity label into a more descriptive activity name based on the label/name table in the file 'activity_labels.txt'.  
+
+### Appropriately label dataset with descriptive variable names
+
+
+
 Additionally, the following variable name modifications were performed:
 
 1. Removed parenthesis from any variable names.  (Ex. mean() -> mean, etc)
-2. Replaced -t with 'Time' and -f with 'Frequency' in any variable names.
-3. Replaced -mean and -std with .Mean and .StandardDeviation in any variable names to eliminate dashes.
-4. Changed -X, -Y, -Z with .X, .Y, .Z in any variable names to eliminate dashes.
+2. Replaced -t with 'Time _' and -f with 'Frequency _' in any variable names.
+3. Replaced -mean and -std with _ Mean and _ StandardDeviation in any variable names to eliminate dashes.
+4. Changed -X, -Y, -Z with _ X, _ Y, _Z in any variable names to eliminate dashes.
 5. Added some descriptions of name shorthand in variable names
     + 'Acc' -> Acceleration
     + 'Mag' -> Magnitude
@@ -59,70 +73,70 @@ Activity --  Type of activity tracked for each individual. (One of 6 activity ty
 
 ##Measurements
 
-Time.BodyAcceleration.Mean.X
-Time.BodyAcceleration.Mean.Y
-Time.BodyAcceleration.Mean.Z
-Time.BodyAcceleration.StandardDeviation.X
-Time.BodyAcceleration.StandardDeviation.Y
-Time.BodyAcceleration.StandardDeviation.Z
-Time.GravityAcceleration.Mean.X
-Time.GravityAcceleration.Mean.Y
-Time.GravityAcceleration.Mean.Z
-Time.GravityAcceleration.StandardDeviation.X
-Time.GravityAcceleration.StandardDeviation.Y
-Time.GravityAcceleration.StandardDeviation.Z
-Time.BodyAccelerationJerk.Mean.X
-Time.BodyAccelerationJerk.Mean.Y
-Time.BodyAccelerationJerk.Mean.Z
-Time.BodyAccelerationJerk.StandardDeviation.X
-Time.BodyAccelerationJerk.StandardDeviation.Y
-Time.BodyAccelerationJerk.StandardDeviation.Z
-Time.BodyGyro.Mean.X
-Time.BodyGyro.Mean.Y
-Time.BodyGyro.Mean.Z
-Time.BodyGyro.StandardDeviation.X
-Time.BodyGyro.StandardDeviation.Y
-Time.BodyGyro.StandardDeviation.Z
-Time.BodyGyroJerk.Mean.X
-Time.BodyGyroJerk.Mean.Y
-Time.BodyGyroJerk.Mean.Z
-Time.BodyGyroJerk.StandardDeviation.X
-Time.BodyGyroJerk.StandardDeviation.Y
-Time.BodyGyroJerk.StandardDeviation.Z
-Time.BodyAccelerationMagnitude.Mean
-Time.BodyAccelerationMagnitude.StandardDeviation
-Time.GravityAccelerationMagnitude.Mean
-Time.GravityAccelerationMagnitude.StandardDeviation
-Time.BodyAccelerationJerkMagnitude.Mean
-Time.BodyAccelerationJerkMagnitude.StandardDeviation
-Time.BodyGyroMagnitude.Mean
-Time.BodyGyroMagnitude.StandardDeviation
-Time.BodyGyroJerkMagnitude.Mean
-Time.BodyGyroJerkMagnitude.StandardDeviation
-Frequency.BodyAcceleration.Mean.X
-Frequency.BodyAcceleration.Mean.Y
-Frequency.BodyAcceleration.Mean.Z
-Frequency.BodyAcceleration.StandardDeviation.X
-Frequency.BodyAcceleration.StandardDeviation.Y
-Frequency.BodyAcceleration.StandardDeviation.Z
-Frequency.BodyAccelerationJerk.Mean.X
-Frequency.BodyAccelerationJerk.Mean.Y
-Frequency.BodyAccelerationJerk.Mean.Z
-Frequency.BodyAccelerationJerk.StandardDeviation.X
-Frequency.BodyAccelerationJerk.StandardDeviation.Y
-Frequency.BodyAccelerationJerk.StandardDeviation.Z
-Frequency.BodyGyro.Mean.X
-Frequency.BodyGyro.Mean.Y
-Frequency.BodyGyro.Mean.Z
-Frequency.BodyGyro.StandardDeviation.X
-Frequency.BodyGyro.StandardDeviation.Y
-Frequency.BodyGyro.StandardDeviation.Z
-Frequency.BodyAccelerationMagnitude.Mean
-Frequency.BodyAccelerationMagnitude.StandardDeviation
-Frequency.BodyAccelerationJerkMagnitude.Mean
-Frequency.BodyAccelerationJerkMagnitude.StandardDeviation
-Frequency.BodyGyroMagnitude.Mean
-Frequency.BodyGyroMagnitude.StandardDeviation
-Frequency.BodyGyroJerkMagnitude.Mean
-Frequency.BodyGyroJerkMagnitude.StandardDeviation
+"Time _ BodyAcceleration _ Mean_X" 
+"Time _ BodyAcceleration _ Mean_Y" 
+"Time _ BodyAcceleration _ Mean_Z" 
+"Time _ BodyAcceleration _ StandardDeviation_X" 
+"Time _ BodyAcceleration _ StandardDeviation_Y" 
+"Time _ BodyAcceleration _ StandardDeviation_Z" 
+"Time _ GravityAcceleration _ Mean_X" 
+"Time _ GravityAcceleration _ Mean_Y" 
+"Time _ GravityAcceleration _ Mean_Z" 
+"Time _ GravityAcceleration _ StandardDeviation_X" 
+"Time_ GravityAcceleration _ StandardDeviation_Y" 
+"Time_ GravityAcceleration _ StandardDeviation_Z" 
+"Time_ BodyAccelerationJerk _ Mean_X" 
+"Time_ BodyAccelerationJerk _ Mean_Y" 
+"Time_ BodyAccelerationJerk _ Mean_Z" 
+"Time_ BodyAccelerationJerk _ StandardDeviation_X" 
+"Time_ BodyAccelerationJerk _ StandardDeviation_Y" 
+"Time_ BodyAccelerationJerk _ StandardDeviation_Z" 
+"Time_ BodyGyro_ Mean_X" 
+"Time_ BodyGyro_ Mean_Y" 
+"Time_ BodyGyro_ Mean_Z" 
+"Time_ BodyGyro_ StandardDeviation_X" 
+"Time_ BodyGyro_ StandardDeviation_Y" 
+"Time_ BodyGyro_ StandardDeviation_Z" 
+"Time_ BodyGyroJerk_ Mean_X" 
+"Time_ BodyGyroJerk_ Mean_Y" 
+"Time_ BodyGyroJerk_ Mean_Z" 
+"Time_ BodyGyroJerk_ StandardDeviation_X" 
+"Time_ BodyGyroJerk_ StandardDeviation_Y" 
+"Time_ BodyGyroJerk_ StandardDeviation_Z" 
+"Time_ BodyAccelerationMagnitude_Mean" 
+"Time_ BodyAccelerationMagnitude_StandardDeviation" 
+"Time_ GravityAccelerationMagnitude_Mean" 
+"Time_ GravityAccelerationMagnitude_StandardDeviation" 
+"Time_ BodyAccelerationJerkMagnitude_Mean" 
+"Time_ BodyAccelerationJerkMagnitude_StandardDeviation" 
+"Time_ BodyGyroMagnitude_Mean" 
+"Time_ BodyGyroMagnitude_StandardDeviation" 
+"Time_ BodyGyroJerkMagnitude_Mean" 
+"Time_ BodyGyroJerkMagnitude_StandardDeviation" 
+"Frequency_ BodyAcceleration_ Mean_X" 
+"Frequency_ BodyAcceleration_ Mean_Y" 
+"Frequency_ BodyAcceleration_ Mean_Z" 
+"Frequency_ BodyAcceleration_ StandardDeviation_X" 
+"Frequency_ BodyAcceleration_ StandardDeviation_Y" 
+"Frequency_ BodyAcceleration_ StandardDeviation_Z" 
+"Frequency_ BodyAccelerationJerk_ Mean_X" 
+"Frequency_ BodyAccelerationJerk_ Mean_Y" 
+"Frequency_ BodyAccelerationJerk_ Mean_Z" 
+"Frequency_ BodyAccelerationJerk_ StandardDeviation_X" 
+"Frequency_ BodyAccelerationJerk_ StandardDeviation_Y" 
+"Frequency_ BodyAccelerationJerk_ StandardDeviation_Z" 
+"Frequency_ BodyGyro_ Mean_X" 
+"Frequency_ BodyGyro_ Mean_Y" 
+"Frequency_ BodyGyro_ Mean_Z" 
+"Frequency_ BodyGyro_ StandardDeviation_X" 
+"Frequency_ BodyGyro_ StandardDeviation_Y" 
+"Frequency_ BodyGyro_ StandardDeviation_Z" 
+"Frequency_ BodyAccelerationMagnitude_Mean" 
+"Frequency_ BodyAccelerationMagnitude_StandardDeviation" 
+"Frequency_ BodyAccelerationJerkMagnitude_Mean" 
+"Frequency_ BodyAccelerationJerkMagnitude_StandardDeviation" 
+"Frequency_ BodyGyroMagnitude_Mean" 
+"Frequency_ BodyGyroMagnitude_StandardDeviation" 
+"Frequency_ BodyGyroJerkMagnitude_Mean" 
+"Frequency_ BodyGyroJerkMagnitude_StandardDeviation"
 
