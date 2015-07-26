@@ -56,11 +56,13 @@ The script performs the following steps:
 
 ###Script Dependencies:
 
-run_analysis.R requires the dplyr package to be installed in your R studio session.
-
 The version of the script uploaded here has sets a working directory on line 9.
 The dataset download extracts itself to a folder named 'UCI HAR Dataset'.
 You need to modify the value of the setwd command in line 9 to point to this folder before attempting to run it.   
+
+Operating system used was Windows 8.1.
+Script was testing on RStudio v.0.99.441 and R v.3.2.0.
+Script generation was performed using Sublime Text build 3083.
 
 
 
