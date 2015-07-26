@@ -32,7 +32,7 @@ df_x_full_fea		<- rbind(df_x_train_fea, df_x_test_fea)
 df_y_full_act		<- rbind(df_y_train_act, df_y_test_act)
 df_s_full_sub		<- rbind(df_s_train_sub, df_s_test_sub)
 
-# Set variable names
+# Set column variable names for Activity and Subject columns
 names(df_x_full_fea) <- df_features$V2
 names(df_y_full_act) <- c("Activity")
 names(df_s_full_sub) <- c("Subject")
@@ -65,7 +65,7 @@ names(df_all_data)	<- gsub('^f', 'Frequency_', names(df_all_data))
 names(df_all_data)	<- gsub('\\-mean', '_Mean', names(df_all_data))
 names(df_all_data)	<- gsub('\\-std', '_StandardDeviation', names(df_all_data))
 
-# Change -X, -Y, -Z to .X, .Y, .Z for consistency in variable delimiters
+# Change -X, -Y, -Z to _X, _Y, _Z for consistency in variable delimiters
 names(df_all_data)	<- gsub('\\-X', '_X', names(df_all_data))
 names(df_all_data)	<- gsub('\\-Y', '_Y', names(df_all_data))
 names(df_all_data)	<- gsub('\\-Z', '_Z', names(df_all_data))
