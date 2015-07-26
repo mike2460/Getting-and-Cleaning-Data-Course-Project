@@ -1,16 +1,17 @@
 ## Getting-and-Cleaning-Data-Course-Project
 
 ###Purpose: 
+
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis.
+
 
 ###Repository Contents:
 This repository contains the following files:
 
-run_Analysis.R
-README.MD
-Codebook.MD
-tinydata.txt
-
+Codebook.MD  	--  contains specifics about how the script works as well as the organizational priciples used for the datasets and output file
+README.MD  		--  this file, contains information about source data and script dependencies
+run_Analysis.R  --  script to generate the tinydata.txt file
+tinydata.txt  	--	output of the run_Analysis.R script against the full dataset
 
 
 ###Dataset Information and Download Links:
@@ -22,6 +23,21 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 Here are the data for the project: 
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+###Tidy Data Principles Followed
+
+In section 2.3 of Hadley [link]http://vita.had.co.nz/papers/tidy-data.pdf, he references Codd's 3rd normal form as it might pertain to the constraints of statistical language and when focused on a single dataset.  This suggests that tidy data be organized by the following 3 core rules:  
+
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table.
+
+To that end, this script will generate a table organized according to these principles.  
+Each row of the table will take the specific Activity of a specific Subject, then list the average of each measurement Variable across the entire data set.  Each column of the table represents a different variable, as indicated by the column heading.
+
+By formatting it like this, we follow rules 1 and 2, with the understanding that each specific Activity/Subject pairing is considered to be an observation.  
+The table is ordered first by Subject, then by Activity which allows us to easily look at the set of Variable averages for a given user.  While this seemed like the most straightforward way to organize this dataset, there are certainly arguments to be made in favor of other approaches.
+
 
 ###Description of run_Analysis.R:
 
@@ -36,6 +52,7 @@ The script performs the following steps:
 4. Appropriately labels the data set with descriptive variable names. 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 6. This will generate an output file in the working directory called 'tinydata.txt'
+
 
 ###Script Dependencies:
 

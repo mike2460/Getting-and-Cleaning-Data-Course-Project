@@ -37,40 +37,51 @@ Notes:
 For more information about this dataset contact: activityrecognition@smartlab.ws
 Information reposted from README file of full dataset download from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
+
 ## Tidy Data Set Modifications
 
 ### Merge test and training datasets together
+
 The script combines the test and training data from the features, activities and subject data files into one dataset.
 At this stage, the variable names used are the ones found in the features.txt file.
 
 ### Create subset of mean and standard deviation data
+
 Next the script uses a grep command: grep("mean\\(\\)|std\\(\\)" to find all feature names that have 'mean' or 'std' in them.
 Once those names have been found, a subset of the full data set is generated using those names.
 
 ### Add descriptive activity names
+
 The script then adds a column that translated the activity label into a more descriptive activity name based on the label/name table in the file 'activity_labels.txt'.  
 
 ### Appropriately label dataset with descriptive variable names
-The desired outcome of this step is to clean up the variable names in an effort to make them somewhat more descriptive, consistent, and potentially easier to work with in R.  I followed some recommendations in [link]http://ivanhanigan.github.io/datasharing/datasharing.html and [link]http://vita.had.co.nz/papers/tidy-data.pdf that suggested using underscores rather than dots in variable names as separators.  The script also removes parentheses, expanded some abbreviations, and cleaned up a potentially confusing 'BodyBody' entry.
+
+The desired outcome of this step is to clean up the variable names in an effort to make them somewhat more descriptive, consistent, and potentially easier to work with in R.  The biggest concern I had was in potentially altering or misinterpreting a variable name in an effort to make it clearer or more descriptive. I followed some recommendations in [link]http://ivanhanigan.github.io/datasharing/datasharing.html and [link]http://vita.had.co.nz/papers/tidy-data.pdf that suggested using underscores rather than dots in variable names as separators.  The script also removes parentheses, expanded some abbreviations, and cleaned up a potentially confusing 'BodyBody' entry.
 
 The following variable name modifications were performed:
 
 1. Removed parenthesis from any variable names.  (Ex. mean() -> mean, etc)
-2. Replaced -t with 'Time _' and -f with 'Frequency _' in any variable names.
-3. Replaced -mean and -std with _ Mean and _ StandardDeviation in any variable names to eliminate dashes.
-4. Changed -X, -Y, -Z with _ X, _ Y, _Z in any variable names to eliminate dashes.
+2. Replaced -t with 'Time_' and -f with 'Frequency_' in any variable names.
+3. Replaced -mean and -std with _Mean and _StandardDeviation in any variable names to eliminate dashes.
+4. Changed -X, -Y, -Z with _X, _Y, _Z in any variable names to eliminate dashes.
 5. Added some descriptions of name shorthand in variable names
     + 'Acc' -> Acceleration
     + 'Mag' -> Magnitude
     + 'BodyBody' -> 'Body'
 
+### Generate a tidy dataset with average of each variable of each activity of each subject
 
-##Identifiers
+The script follows the rules of Codd's 3rd form (as referenced in the README file), and does this by creating a separate data set from the full data set.  It uses the aggregate() function to calculate the mean for each variable as broken down by Subject and Activity.  It then uses the order() function to sort the dataset, first by Subject, then by Activity.  Finally it uses the write.table() function as prescribed by the course requirements to write the output file 'tidydata.txt' to the current working directory.
 
-Subject  --  Individual for whom multiple activities were recorded in the dataset.  (ranges from 1-30)
-Activity --  Type of activity tracked for each individual. (One of 6 activity types: WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING)
 
-##Measurements
+##Variables listed in tidydata.txt output file
+
+###Identifiers
+
+* Subject  --  Individual for whom multiple activities were recorded in the dataset.  (ranges from 1-30)
+* Activity --  Type of activity tracked for each individual. (One of 6 activity types: WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING)
+
+###Measurements
 
 * Time_BodyAcceleration_Mean_X
 * Time_BodyAcceleration_Mean_Y

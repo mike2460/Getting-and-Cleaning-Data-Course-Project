@@ -2,9 +2,6 @@
 # Mike Hnat
 # July 25, 2015
 
-# Load dplyr library; won't need it until later but I like loading any dependencies at the beginning.
-library(dplyr)
-
 # Set my current dir to my extracted zip file location.  You may need to alter this to run on your system.
 setwd("~/GaCD/UCI HAR Dataset/")
 
@@ -37,8 +34,8 @@ df_s_full_sub		<- rbind(df_s_train_sub, df_s_test_sub)
 
 # Set variable names
 names(df_x_full_fea) <- df_features$V2
-names(df_y_full_act) <- c("activity")
-names(df_s_full_sub) <- c("subject")
+names(df_y_full_act) <- c("Activity")
+names(df_s_full_sub) <- c("Subject")
 
 # Merge columns into all_data dataframe
 df_merge1   	<- cbind(df_s_full_sub, df_y_full_act)
@@ -49,12 +46,12 @@ df_all_data 	<- cbind(df_x_full_fea, df_merge1)
 df_sd_features <- df_features$V2[grep("mean\\(\\)|std\\(\\)", df_features$V2)]
 
 # Create a subest of the df_all_data data frame per the selected Features names
-fea_names 	<- c(as.character(df_sd_features), "subject", "activity")
+fea_names 	<- c(as.character(df_sd_features), "Subject", "Activity")
 df_all_data <- subset(df_all_data, select=fea_names)
 
 ### Requirement 3 - Use descriptive activity names to name the activities in the data set
 # Factor activity names from activity labels into dataset
-df_all_data$activity <- factor(df_all_data$activity, levels = df_activity_labels[,1], labels = df_activity_labels[,2])
+df_all_data$Activity <- factor(df_all_data$Activity, levels = df_activity_labels[,1], labels = df_activity_labels[,2])
 
 ### Requirement 4 - Appropriately labels the data set with descriptive variable names. 
 # Remove parentheses from variable names
@@ -80,6 +77,6 @@ names(df_all_data)	<- gsub('BodyBody', 'Body', names(df_all_data))
 
 ### Requirement 5 - From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-df_all_data_2	<-aggregate(. ~subject + activity, df_all_data, mean)
-df_all_data_2	<- df_all_data_2[order(df_all_data_2$subject, df_all_data_2$activity),]
+df_all_data_2	<-aggregate(. ~Subject + Activity, df_all_data, mean)
+df_all_data_2	<- df_all_data_2[order(df_all_data_2$Subject, df_all_data_2$Activity),]
 write.table(df_all_data_2, file = "tidydata.txt", row.name=FALSE)
