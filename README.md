@@ -57,7 +57,7 @@ The script performs the following steps:
 
 ###Script Dependencies:
 
-The version of the script uploaded here has sets a working directory on line 9.
+The version of the script uploaded here sets a working directory on line 6.
 The dataset download extracts itself to a folder named 'UCI HAR Dataset'.
 You need to modify the value of the setwd command in line 9 to point to this folder before attempting to run it.   
 
