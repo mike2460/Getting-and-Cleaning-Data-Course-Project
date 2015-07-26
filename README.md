@@ -9,8 +9,8 @@ The purpose of this project is to demonstrate your ability to collect, work with
 
 This repository contains the following files:
 
-* CodeBook.MD 		--  contains specifics about how the script works as well as the organizational priciples used for the datasets and output file
-* README.MD  		--  this file, contains information about source data and script dependencies
+* CodeBook.MD 		--  contains specifics about how the run_Analysis.R script works and particulars about the output file contents and organization
+* README.MD  		--  this file, contains information about source data and script dependencies as well as the organizational priciples used for the datasets
 * run_Analysis.R 	--  script to generate the tinydata.txt file
 * tinydata.txt 		--	output of the run_Analysis.R script against the full dataset
 
