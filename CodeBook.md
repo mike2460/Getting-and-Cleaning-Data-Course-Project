@@ -72,70 +72,70 @@ Activity --  Type of activity tracked for each individual. (One of 6 activity ty
 
 ##Measurements
 
-"Time_BodyAcceleration_Mean_X" 
-"Time_ BodyAcceleration _ Mean_Y" 
-"Time _ BodyAcceleration _ Mean_Z" http://vita.had.co.nz/papers/tidy-data.pdf
-"Time _ BodyAcceleration _ StandardDeviation_X" 
-"Time _ BodyAcceleration _ StandardDeviation_Y" 
-"Time _ BodyAcceleration _ StandardDeviation_Z" 
-"Time _ GravityAcceleration _ Mean_X" 
-"Time _ GravityAcceleration _ Mean_Y" 
-"Time _ GravityAcceleration _ Mean_Z" 
-"Time _ GravityAcceleration _ StandardDeviation_X" 
-"Time_ GravityAcceleration _ StandardDeviation_Y" 
-"Time_ GravityAcceleration _ StandardDeviation_Z" 
-"Time_ BodyAccelerationJerk _ Mean_X" 
-"Time_ BodyAccelerationJerk _ Mean_Y" 
-"Time_ BodyAccelerationJerk _ Mean_Z" 
-"Time_ BodyAccelerationJerk _ StandardDeviation_X" 
-"Time_ BodyAccelerationJerk _ StandardDeviation_Y" 
-"Time_ BodyAccelerationJerk _ StandardDeviation_Z" 
-"Time_ BodyGyro_ Mean_X" 
-"Time_ BodyGyro_ Mean_Y" 
-"Time_ BodyGyro_ Mean_Z" 
-"Time_ BodyGyro_ StandardDeviation_X" 
-"Time_ BodyGyro_ StandardDeviation_Y" 
-"Time_ BodyGyro_ StandardDeviation_Z" 
-"Time_ BodyGyroJerk_ Mean_X" 
-"Time_ BodyGyroJerk_ Mean_Y" 
-"Time_ BodyGyroJerk_ Mean_Z" 
-"Time_ BodyGyroJerk_ StandardDeviation_X" 
-"Time_ BodyGyroJerk_ StandardDeviation_Y" 
-"Time_ BodyGyroJerk_ StandardDeviation_Z" 
-"Time_ BodyAccelerationMagnitude_Mean" 
-"Time_ BodyAccelerationMagnitude_StandardDeviation" 
-"Time_ GravityAccelerationMagnitude_Mean" 
-"Time_ GravityAccelerationMagnitude_StandardDeviation" 
-"Time_ BodyAccelerationJerkMagnitude_Mean" 
-"Time_ BodyAccelerationJerkMagnitude_StandardDeviation" 
-"Time_ BodyGyroMagnitude_Mean" 
-"Time_ BodyGyroMagnitude_StandardDeviation" 
-"Time_ BodyGyroJerkMagnitude_Mean" 
-"Time_ BodyGyroJerkMagnitude_StandardDeviation" 
-"Frequency_ BodyAcceleration_ Mean_X" 
-"Frequency_ BodyAcceleration_ Mean_Y" 
-"Frequency_ BodyAcceleration_ Mean_Z" 
-"Frequency_ BodyAcceleration_ StandardDeviation_X" 
-"Frequency_ BodyAcceleration_ StandardDeviation_Y" 
-"Frequency_ BodyAcceleration_ StandardDeviation_Z" 
-"Frequency_ BodyAccelerationJerk_ Mean_X" 
-"Frequency_ BodyAccelerationJerk_ Mean_Y" 
-"Frequency_ BodyAccelerationJerk_ Mean_Z" 
-"Frequency_ BodyAccelerationJerk_ StandardDeviation_X" 
-"Frequency_ BodyAccelerationJerk_ StandardDeviation_Y" 
-"Frequency_ BodyAccelerationJerk_ StandardDeviation_Z" 
-"Frequency_ BodyGyro_ Mean_X" 
-"Frequency_ BodyGyro_ Mean_Y" 
-"Frequency_ BodyGyro_ Mean_Z" 
-"Frequency_ BodyGyro_ StandardDeviation_X" 
-"Frequency_ BodyGyro_ StandardDeviation_Y" 
-"Frequency_ BodyGyro_ StandardDeviation_Z" 
-"Frequency_ BodyAccelerationMagnitude_Mean" 
-"Frequency_ BodyAccelerationMagnitude_StandardDeviation" 
-"Frequency_ BodyAccelerationJerkMagnitude_Mean" 
-"Frequency_ BodyAccelerationJerkMagnitude_StandardDeviation" 
-"Frequency_ BodyGyroMagnitude_Mean" 
-"Frequency_ BodyGyroMagnitude_StandardDeviation" 
-"Frequency_ BodyGyroJerkMagnitude_Mean" 
-"Frequency_ BodyGyroJerkMagnitude_StandardDeviation"
+Time_BodyAcceleration_Mean_X
+Time_BodyAcceleration_Mean_Y
+Time_BodyAcceleration_Mean_Z
+Time_BodyAcceleration_StandardDeviation_X
+Time_BodyAcceleration_StandardDeviation_Y
+Time_BodyAcceleration_StandardDeviation_Z
+Time_GravityAcceleration_Mean_X
+Time_GravityAcceleration_Mean_Y
+Time_GravityAcceleration_Mean_Z
+Time_GravityAcceleration_StandardDeviation_X
+Time_GravityAcceleration_StandardDeviation_Y
+Time_GravityAcceleration_StandardDeviation_Z
+Time_BodyAccelerationJerk_Mean_X
+Time_BodyAccelerationJerk_Mean_Y
+Time_BodyAccelerationJerk_Mean_Z
+Time_BodyAccelerationJerk_StandardDeviation_X
+Time_BodyAccelerationJerk_StandardDeviation_Y
+Time_BodyAccelerationJerk_StandardDeviation_Z
+Time_BodyGyro_Mean_X
+Time_BodyGyro_Mean_Y
+Time_BodyGyro_Mean_Z
+Time_BodyGyro_StandardDeviation_X
+Time_BodyGyro_StandardDeviation_Y
+Time_BodyGyro_StandardDeviation_Z
+Time_BodyGyroJerk_Mean_X
+Time_BodyGyroJerk_Mean_Y
+Time_BodyGyroJerk_Mean_Z
+Time_BodyGyroJerk_StandardDeviation_X
+Time_BodyGyroJerk_StandardDeviation_Y
+Time_BodyGyroJerk_StandardDeviation_Z
+Time_BodyAccelerationMagnitude_Mean
+Time_BodyAccelerationMagnitude_StandardDeviation
+Time_GravityAccelerationMagnitude_Mean
+Time_GravityAccelerationMagnitude_StandardDeviation
+Time_BodyAccelerationJerkMagnitude_Mean
+Time_BodyAccelerationJerkMagnitude_StandardDeviation
+Time_BodyGyroMagnitude_Mean
+Time_BodyGyroMagnitude_StandardDeviation
+Time_BodyGyroJerkMagnitude_Mean
+Time_BodyGyroJerkMagnitude_StandardDeviation
+Frequency_BodyAcceleration_Mean_X
+Frequency_BodyAcceleration_Mean_Y
+Frequency_BodyAcceleration_Mean_Z
+Frequency_BodyAcceleration_StandardDeviation_X
+Frequency_BodyAcceleration_StandardDeviation_Y
+Frequency_BodyAcceleration_StandardDeviation_Z
+Frequency_BodyAccelerationJerk_Mean_X
+Frequency_BodyAccelerationJerk_Mean_Y
+Frequency_BodyAccelerationJerk_Mean_Z
+Frequency_BodyAccelerationJerk_StandardDeviation_X
+Frequency_BodyAccelerationJerk_StandardDeviation_Y
+Frequency_BodyAccelerationJerk_StandardDeviation_Z
+Frequency_BodyGyro_Mean_X
+Frequency_BodyGyro_Mean_Y
+Frequency_BodyGyro_Mean_Z
+Frequency_BodyGyro_StandardDeviation_X
+Frequency_BodyGyro_StandardDeviation_Y
+Frequency_BodyGyro_StandardDeviation_Z
+Frequency_BodyAccelerationMagnitude_Mean
+Frequency_BodyAccelerationMagnitude_StandardDeviation
+Frequency_BodyAccelerationJerkMagnitude_Mean
+Frequency_BodyAccelerationJerkMagnitude_StandardDeviation
+Frequency_BodyGyroMagnitude_Mean
+Frequency_BodyGyroMagnitude_StandardDeviation
+Frequency_BodyGyroJerkMagnitude_Mean
+Frequency_BodyGyroJerkMagnitude_StandardDeviation
 
